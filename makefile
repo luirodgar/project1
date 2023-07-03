@@ -1,7 +1,8 @@
 all: readme guessinggame git
 
 readme: 
-	echo "##The name of the project is *project1*" >README.md
+	echo "## The name of the project is *project1*" >README.md
+	echo "" >>README.md
 	my_date=$(date)
 	echo "Make was executed last time" `date` >>README.md
 	echo $(date) >>README.md
@@ -12,5 +13,6 @@ guessinggame: guessinggame.sh
 
 git:
 	git add -A
+	git commit -m "Commit for project1"
 	git push -u origin master
 

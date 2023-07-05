@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
+
+function fguess(){
+
+
+local guess
+local num_of_files
+
 echo "Please introduce the number of the files in the current directory:"
 
 read guess
 
 num_of_files=$(expr $(ls -l|wc -l) - 1)
-
-echo $num_of_files
 
 while [[ $guess -ne $num_of_files ]]	
 do
@@ -22,4 +27,8 @@ do
 done
 
 echo "Congratuations!! Well done!!"
+
+}
+
+fguess
 	

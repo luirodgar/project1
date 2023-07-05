@@ -16,3 +16,5 @@ git:
 	git commit -m "Commit for project1"
 	git push -u origin master
 
+clean:
+	rm README.md
